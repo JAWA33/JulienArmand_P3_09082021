@@ -1,48 +1,17 @@
-/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+* {
   margin: 0;
   padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-ul {
   list-style: none;
-}
-
-button, input, select {
-  margin: 0;
-}
-
-html {
+  text-decoration: none;
   box-sizing: border-box;
+  color: inherit;
 }
 
-*, *::before, *::after {
-  box-sizing: inherit;
-}
-
-img, video {
+img {
   height: auto;
   max-width: 100%;
-}
-
-iframe {
-  border: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-td, th {
-  padding: 0;
 }
 
 h1 {
@@ -63,23 +32,34 @@ h3 {
   font-size: 1.1rem;
 }
 
-p {
+p, li {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   font-size: 1rem;
-  font-weight: 200;
-}
-
-li {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-weight: 300;
 }
 
 .logoFont {
   font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
 }
 
-footer {
+.endPage {
+  width: 100%;
+  padding: 1.5rem;
   background-color: #333333;
   color: white;
+}
+.endPage__title {
+  margin-bottom: 1rem;
+}
+.endPage__lign {
+  margin-bottom: 0.5rem;
+}
+.endPage__lign i {
+  width: 25px;
+}
+.endPage__lign a:hover {
+  color: #99E2D0;
 }
 
 body {

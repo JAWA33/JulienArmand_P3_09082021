@@ -1,4 +1,18 @@
-footer {
+.endPage{
+  width: 100%;
+  padding: 1.5rem;
   background-color: $bgColor-footer;
   @include textColor($bgColor-footer);
+  &__title{
+    margin-bottom: 1rem;
+  }
+  &__lign{
+    margin-bottom: 0.5rem;
+    i {
+      width: 25px;
+    }
+    a:hover {
+      color: $colorTertiary;
+    }
+  }
 }
