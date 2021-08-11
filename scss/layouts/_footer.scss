@@ -1,0 +1,4 @@
+footer {
+  background-color: $bgColor-footer;
+  @include textColor($bgColor-footer);
+}

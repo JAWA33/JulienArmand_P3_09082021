@@ -1,3 +1,18 @@
-body {
-  background: #000;
-}
+//! Graphical charter : Color
+
+$colorPrimary:  #9356DC;
+$colorSecondary:  #FF79DA;
+$colorTertiary:  #99E2D0;
+
+//Principal Background color
+$bgColor:white;
+
+//Section Background color
+$bgColor-header:$bgColor;
+$bgColor-body:$bgColor;
+$bgColor-main:$bgColor;
+$bgColor-mainLight:darken($bgColor,4%);
+$bgColor-mainDark:darken($bgColor,9%);
+$bgColor-footer:darken($bgColor,80%);
+
+
