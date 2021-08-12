@@ -69,6 +69,10 @@ p, li {
   left: 1.5rem;
   color: #333333;
 }
+.mySite__backToMenu:hover {
+  transform: scale(1.2);
+  color: #99E2D0;
+}
 .mySite::after {
   content: "";
   position: absolute;

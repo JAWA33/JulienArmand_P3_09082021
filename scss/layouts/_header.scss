@@ -11,6 +11,10 @@
         position: absolute;
         left: 1.5rem;
         color: $bgColor-footer;
+        &:hover{
+            transform: scale(1.2);
+            color: $colorTertiary;
+        }
     }
     &::after{
         content: '';
