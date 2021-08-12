@@ -14,6 +14,18 @@ img {
   max-width: 100%;
 }
 
+.mySite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mySite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1 {
   font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
   font-size: 1.9rem;
@@ -43,6 +55,30 @@ p, li {
   font-size: 1.2rem;
 }
 
+.mySite {
+  position: relative;
+  width: 100%;
+  background-color: white;
+}
+.mySite__title {
+  margin: 0.6rem;
+  color: #101010;
+}
+.mySite__backToMenu {
+  position: absolute;
+  left: 1.5rem;
+  color: #333333;
+}
+.mySite::after {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  left: 0;
+  width: 100%;
+  height: 0.6rem;
+  background: linear-gradient(#c2c2c2, #e8e8e8);
+}
+
 .endPage {
   width: 100%;
   padding: 1.5rem;
@@ -67,11 +103,11 @@ body {
 }
 
 #citySelection {
-  background-color: white;
+  background-color: #e8e8e8;
 }
 
 #exploreRestaurants {
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 #siteTutorial {
@@ -79,5 +115,5 @@ body {
 }
 
 #restaurantsSelection {
-  background-color: white;
+  background-color: whitesmoke;
 }/*# sourceMappingURL=main.css.map */

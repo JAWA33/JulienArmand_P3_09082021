@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Meta description-->
-    <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !"/>
+    <meta name="description" content="Ohmyfood est une entreprise de commande de repas en ligne"/>
 
     <!-- Lien du fichier CSS-->
     <link rel="stylesheet" href="css/main.css" />
@@ -19,10 +19,13 @@
   
   <body>
     <header>
-      <div>
-        <i class="fas fa-arrow-left"></i>
+      <div class="mySite">
+        <!-- Pour version page :
+        <div class="mySite__backToMenu">
+          <i class="fas fa-lg fa-arrow-left"></i>
+        </div> -->
+        <h1 class="mySite__title">ohmyfood</h1>
       </div>
-      <h1>ohmyfood</h1>
     </header>
 
     <main>
@@ -37,13 +40,13 @@
 
       </section>
 
-      <section id="exploreRestaurants">
+      <section id="exploreRestaurants" style="display: none;"><!-- Style Display:none à supprimer-->
         <h2>Réservez le menu qui vous convient</h2>
         <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
         <button>Explorer nos restaurants</button>
       </section>
 
-      <section id="siteTutorial">
+      <section id="siteTutorial" style="display: none;"><!-- Style Display:none à supprimer-->
         <h2>Fonctionnement</h2>
         <button><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</button>
         <button><i class="fas fa-list-ul"></i>Composez votre menu</button>
@@ -51,7 +54,7 @@
     
       </section>
 
-      <section id="restaurantsSelection">
+      <section id="restaurantsSelection" style="display: none;"><!-- Style Display:none à supprimer-->
         <h2>Restaurants</h2>
 
         <!--First restaurant-->
@@ -134,7 +137,7 @@
           <li class="endPage__lign"><a href="#"><i class="fas fa-xs fa-hands-helping"></i>Devenir partenaire</a></li>
           <li class="endPage__lign"><a href="#">Mentions légales</a></li>
           <!--Mettre en place lien vers e-mail-->
-          <li class="endPage__lign"><a href="#">Contact</a></li> 
+          <li class="endPage__lign"><a href="mailto:email@ohmyfood.com?subject=subjecttext">Contact</a></li> 
         </ul>
     </footer>
   </body>

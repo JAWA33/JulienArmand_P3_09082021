@@ -3,18 +3,19 @@ body{
 }
 
 #citySelection{
-    background-color: $bgColor;
+    background-color: $bgColor-mainDark;
+
 }
 
 #exploreRestaurants{
-    background-color: $bgColor;
+    background-color: $bgColor-mainLight;
 }
 
 #siteTutorial{
-    background-color: $bgColor;
+    background-color: $bgColor-main;
 }
 
 #restaurantsSelection{
-    background-color: $bgColor;
+    background-color: $bgColor-mainLight;
 }
 
