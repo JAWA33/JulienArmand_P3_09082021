@@ -2,18 +2,16 @@
     @extend %flex_CC;
     position: relative;
     width: 100%;
-    background-color: $bgColor;
+    @include bg_textColor($colorAdd_main);
     &__title{
         margin: 0.6rem;
-        @include textColor($bgColor);
     }
     &__backToMenu{
         position: absolute;
         left: 1.5rem;
-        color: $bgColor-footer;
+        color: $colorAdd_darkest;
         &:hover{
-            transform: scale(1.2);
-            color: $colorTertiary;
+            @extend %basicHover;
         }
     }
     &::after{
@@ -23,6 +21,6 @@
         left: 0;
         width: 100%;
         height: 0.6rem;
-        background: linear-gradient(darken($bgColor-mainDark, 15%), $bgColor-mainDark); 
+        background: linear-gradient(darken($colorAdd_dark, 15%), $colorAdd_dark); 
     }
 }

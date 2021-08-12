@@ -1,11 +1,13 @@
-//Couleur du texte automatique en fonction du fond
+//Choose background color and Text Color automatic (depend of background-color)//
 
-@mixin textColor($color : $bgColor){
-    @if ( lightness($color) > 50% ) {
-        $color: #101010;
+@mixin bg_textColor($textColor : $colorAdd_main){
+
+    background-color: $textColor;
+
+    @if ( lightness($textColor) > 70% ) {
+        $textColor: #101010;
     }@else{
-        $color: white;
+        $textColor: white;
     }
-        color: $color;
+        color: $textColor;
 }
-

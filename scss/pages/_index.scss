@@ -1,21 +1,46 @@
 body{
-    background-color: $bgColor;
+    background-color: $colorAdd_main;
 }
 
-#citySelection{
-    background-color: $bgColor-mainDark;
+.citySelection{
+    background-color: $colorAdd_dark;
+    @extend %flex_CC;
+    &__chooseBlock{
+        margin: 1rem 0;
+    }
+    &__icon{
+        font-size: 1.1rem;
+        margin-left: 1.1rem;
+        color: $colorAdd_darkest;
+        &:hover{
+            i{
+                @extend %basicHover;
+            }  
+        }
+    }
+    &__customerChoice{
+        padding-left: 1rem;
+        width:min-content;
+        background-color: $colorAdd_dark;
+        border: none;
+        font-size: 1rem;
+        &::placeholder{
+            color: $colorAdd_darkest;
+        }
+    }
+
 
 }
 
 #exploreRestaurants{
-    background-color: $bgColor-mainLight;
+    background-color: $colorAdd_light;
 }
 
 #siteTutorial{
-    background-color: $bgColor-main;
+    background-color: $colorAdd_main;
 }
 
 #restaurantsSelection{
-    background-color: $bgColor-mainLight;
+    background-color: $colorAdd_light;
 }
 

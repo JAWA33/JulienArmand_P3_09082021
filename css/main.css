@@ -14,16 +14,19 @@ img {
   max-width: 100%;
 }
 
-.mySite {
+.citySelection, .mySite {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.mySite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.citySelection__icon:hover i, .endPage__lign a:hover, .mySite__backToMenu:hover {
+  transform: scale(1.3);
+  color: #99E2D0;
+}
+
+.displayNone {
+  display: none;
 }
 
 h1 {
@@ -59,19 +62,15 @@ p, li {
   position: relative;
   width: 100%;
   background-color: white;
+  color: #101010;
 }
 .mySite__title {
   margin: 0.6rem;
-  color: #101010;
 }
 .mySite__backToMenu {
   position: absolute;
   left: 1.5rem;
   color: #333333;
-}
-.mySite__backToMenu:hover {
-  transform: scale(1.2);
-  color: #99E2D0;
 }
 .mySite::after {
   content: "";
@@ -96,18 +95,40 @@ p, li {
   margin-bottom: 0.5rem;
 }
 .endPage__lign i {
-  width: 25px;
+  width: 1.6rem;
 }
-.endPage__lign a:hover {
-  color: #99E2D0;
-}
-
 body {
   background-color: white;
 }
 
-#citySelection {
+.citySelection {
   background-color: #e8e8e8;
+}
+.citySelection__chooseBlock {
+  margin: 1rem 0;
+}
+.citySelection__icon {
+  font-size: 1.1rem;
+  margin-left: 1.1rem;
+  color: #333333;
+}
+.citySelection__customerChoice {
+  padding-left: 1rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  background-color: #e8e8e8;
+  border: none;
+  font-size: 1rem;
+}
+.citySelection__customerChoice::-moz-placeholder {
+  color: #333333;
+}
+.citySelection__customerChoice:-ms-input-placeholder {
+  color: #333333;
+}
+.citySelection__customerChoice::placeholder {
+  color: #333333;
 }
 
 #exploreRestaurants {

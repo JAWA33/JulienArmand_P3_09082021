@@ -1,18 +1,17 @@
 .endPage{
   width: 100%;
   padding: 1.5rem;
-  background-color: $bgColor-footer;
-  @include textColor($bgColor-footer);
+  @include bg_textColor($colorAdd_darkest);
   &__title{
     margin-bottom: 1rem;
   }
   &__lign{
     margin-bottom: 0.5rem;
     i {
-      width: 25px;
+      width: 1.6rem;
     }
     a:hover {
-      color: $colorTertiary;
+      @extend %basicHover;
     }
   }
 }

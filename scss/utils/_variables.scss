@@ -1,18 +1,15 @@
-//! Graphical charter : Color
+//* Graphical charter : Color
 
 $colorPrimary:  #9356DC;
 $colorSecondary:  #FF79DA;
 $colorTertiary:  #99E2D0;
 
-//Principal Background color
-$bgColor:rgb(255, 255, 255);
+//Additional colors
+$colorAdd_main:rgb(255, 255, 255);
+$colorAdd_light:darken($colorAdd_main,4%);
+$colorAdd_dark:darken($colorAdd_main,9%);
+$colorAdd_darkest:darken($colorAdd_main,80%);
 
-//Section Background color
-$bgColor-header:$bgColor;
-$bgColor-body:$bgColor;
-$bgColor-main:$bgColor;
-$bgColor-mainLight:darken($bgColor,4%);
-$bgColor-mainDark:darken($bgColor,9%);
-$bgColor-footer:darken($bgColor,80%);
+//!NOTA : For text color, see in _mixins.scss //
 
 
