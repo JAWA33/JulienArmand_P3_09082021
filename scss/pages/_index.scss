@@ -4,7 +4,7 @@ body{
 
 .citySelection{
     background-color: $colorAdd_dark;
-    @extend %flex_CC;
+    @include flexCol ("cen","cen");
     &__chooseBlock{
         margin: 1rem 0;
     }
@@ -28,16 +28,37 @@ body{
             color: $colorAdd_darkest;
         }
     }
-
-
 }
 
-#exploreRestaurants{
-    background-color: $colorAdd_light;
+.exploreRestaurants{
+    @include flexCol ("spE","cen");
+    @include bg_textColor($colorAdd_light);
+    width: 100%;
+    height: 280px;
+    
+    &__title{
+        width: 64%;
+        text-align: center;
+    }
+    &__text{
+        width: 82%;
+        text-align: center;
+    }
 }
 
-#siteTutorial{
-    background-color: $colorAdd_main;
+.tutorial{
+    @include flexCol ("spE","flexS");
+    @include bg_textColor($colorAdd_main);
+    margin: 3rem 1.5rem;
+    &__title{
+        margin-bottom: 1rem;
+    }
+    &__buttons{
+        @include flexCol("cen", "cen");
+        width: 100%;
+        counter-reset: step;
+    }
+
 }
 
 #restaurantsSelection{

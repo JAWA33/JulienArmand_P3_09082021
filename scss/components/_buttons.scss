@@ -1,0 +1,66 @@
+//Boutons du site 
+
+.btn{
+    border: none;
+    border-radius: 25px;
+    @extend %buttonShadow;
+    &:hover{
+        transform: translate(0,-0.1rem);
+    }
+    &:active{
+        transform: translate(0, 0rem);
+        box-shadow: none;
+    }
+
+    &__main{
+        width: 218px;
+        height: 50px;
+        background: linear-gradient(355deg, $colorPrimary, $colorSecondary);
+        color: white;
+        font-size: 1rem;
+        &:hover{
+            background: linear-gradient(355deg, lighten($colorPrimary,4%),lighten($colorSecondary,2%));
+        }
+    }
+
+    &__tutorial{
+        width: 100%;
+        height: 75px;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        position: relative;
+        @include bg_textColor ($colorAdd_light);
+        @include flexRow ("flexS", "cen");
+        i {
+            margin:0 1.5rem 0 2rem;
+            color: darken($colorAdd_dark,40%);
+        }
+        &:hover{
+            background: lighten($colorPrimary, 35%);
+            > i{
+                color: $colorPrimary;
+            }
+        }
+        &::before{
+            counter-increment: step 1;
+            content: counter(step) " ";
+            
+            @include bg_textColor ($colorPrimary);
+            @include flexCol ("cen", "cen");
+
+            font-size: 0.9rem;
+            position: absolute;
+            left:0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+    
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 0.75rem;
+        }
+
+        
+    }
+}
+
+//! Voir pour ajouter des transitions sur les boutons au hover

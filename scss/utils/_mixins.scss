@@ -1,13 +1,82 @@
 //Choose background color and Text Color automatic (depend of background-color)//
 
-@mixin bg_textColor($textColor : $colorAdd_main){
+@mixin bg_textColor($textColor: $colorAdd_main) {
+  background-color: $textColor;
 
-    background-color: $textColor;
+  @if (lightness($textColor) > 70%) {
+    $textColor: #101010;
+  } @else {
+    $textColor: white;
+  }
+  color: $textColor;
+}
 
-    @if ( lightness($textColor) > 70% ) {
-        $textColor: #101010;
-    }@else{
-        $textColor: white;
-    }
-        color: $textColor;
+//Flexbox Column
+@mixin flexCol ($justify: initial, $align: initial){
+  display: flex;
+  flex-direction: column;
+
+  @if($justify == "cen"){
+    justify-content: center;
+  }@elseif($justify == "spA"){
+    justify-content: space-around;
+  }@elseif($justify == "spB"){
+    justify-content: space-between;
+  }@elseif($justify == "spE"){
+    justify-content: space-evenly;
+  }@elseif($justify == "base"){
+    justify-content: baseline;
+  }@else{
+    justify-content:$justify;
+  }
+
+  @if($align == "cen"){
+    align-items: center;
+  }@elseif($align == "flexS"){
+    align-items: flex-start;
+  }@elseif($align == "flexE"){
+    align-items: flex-end;
+  }@elseif($align == "st"){
+    align-items: stretch;
+  }@elseif($align == "base"){
+    align-items: baseline;
+  }@else{
+    align-items:$align;
+  }
+
+}
+
+//Flexbox Row
+@mixin flexRow ($justify: initial, $align: initial){
+  display: flex;
+  flex-direction: row;
+
+  @if($justify == "cen"){
+    justify-content: center;
+  }@elseif($justify == "spA"){
+    justify-content: space-around;
+  }@elseif($justify == "spB"){
+    justify-content: space-between;
+  }@elseif($justify == "spE"){
+    justify-content: space-evenly;
+  }@elseif($justify == "base"){
+    justify-content: baseline;
+  }@else{
+    justify-content:$justify;
+  }
+
+  @if($align == "cen"){
+    align-items: center;
+  }@elseif($align == "flexS"){
+    align-items: flex-start;
+  }@elseif($align == "flexE"){
+    align-items: flex-end;
+  }@elseif($align == "st"){
+    align-items: stretch;
+  }@elseif($align == "base"){
+    align-items: baseline;
+  }@else{
+    align-items:$align;
+  }
+
 }

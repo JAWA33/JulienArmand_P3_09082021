@@ -14,55 +14,131 @@ img {
   max-width: 100%;
 }
 
-.citySelection, .mySite {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .citySelection__icon:hover i, .endPage__lign a:hover, .mySite__backToMenu:hover {
   transform: scale(1.3);
   color: #99E2D0;
+}
+
+.btn {
+  box-shadow: 0 0.3rem 0.5rem rgba(51, 51, 51, 0.2);
+}
+.btn:hover {
+  box-shadow: 0 0.4rem 0.5rem rgba(51, 51, 51, 0.3);
 }
 
 .displayNone {
   display: none;
 }
 
-h1 {
+h1, .logoFont {
   font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
-  font-size: 1.9rem;
+  font-weight: initial;
 }
 
-h2, h3 {
+h2, h3, p, li {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
-  font-weight: bold;
+}
+
+h1 {
+  font-size: 1.9rem;
 }
 
 h2 {
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 h3 {
   font-size: 1.1rem;
+  font-weight: bold;
 }
 
-p, li {
-  font-family: "Roboto", Arial, Helvetica, sans-serif;
+p {
+  font-size: 1.1rem;
+  font-weight: 200;
+}
+
+li {
   font-size: 1rem;
   font-weight: 300;
 }
 
 .logoFont {
-  font-family: "Shrikhand", cursive, Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
 }
 
-.mySite {
-  position: relative;
+.btn {
+  border: none;
+  border-radius: 25px;
+}
+.btn:hover {
+  transform: translate(0, -0.1rem);
+}
+.btn:active {
+  transform: translate(0, 0rem);
+  box-shadow: none;
+}
+.btn__main {
+  width: 218px;
+  height: 50px;
+  background: linear-gradient(355deg, #9356DC, #FF79DA);
+  color: white;
+  font-size: 1rem;
+}
+.btn__main:hover {
+  background: linear-gradient(355deg, #9e67e0, #ff83dd);
+}
+.btn__tutorial {
   width: 100%;
+  height: 75px;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  position: relative;
+  background-color: whitesmoke;
+  color: #101010;
+  display: flex;
+  flex-direction: row;
+  justify-content: "flexS";
+  align-items: center;
+}
+.btn__tutorial i {
+  margin: 0 1.5rem 0 2rem;
+  color: #828282;
+}
+.btn__tutorial:hover {
+  background: #f2eafb;
+}
+.btn__tutorial:hover > i {
+  color: #9356DC;
+}
+.btn__tutorial::before {
+  counter-increment: step 1;
+  content: counter(step) " ";
+  background-color: #9356DC;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.mySite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: white;
   color: #101010;
+  position: relative;
+  width: 100%;
 }
 .mySite__title {
   margin: 0.6rem;
@@ -75,10 +151,10 @@ p, li {
 .mySite::after {
   content: "";
   position: absolute;
-  bottom: -0.6rem;
+  bottom: -0.3rem;
   left: 0;
   width: 100%;
-  height: 0.6rem;
+  height: 0.3rem;
   background: linear-gradient(#c2c2c2, #e8e8e8);
 }
 
@@ -103,6 +179,10 @@ body {
 
 .citySelection {
   background-color: #e8e8e8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .citySelection__chooseBlock {
   margin: 1rem 0;
@@ -131,12 +211,44 @@ body {
   color: #333333;
 }
 
-#exploreRestaurants {
+.exploreRestaurants {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background-color: whitesmoke;
+  color: #101010;
+  width: 100%;
+  height: 280px;
+}
+.exploreRestaurants__title {
+  width: 64%;
+  text-align: center;
+}
+.exploreRestaurants__text {
+  width: 82%;
+  text-align: center;
 }
 
-#siteTutorial {
+.tutorial {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
   background-color: white;
+  color: #101010;
+  margin: 3rem 1.5rem;
+}
+.tutorial__title {
+  margin-bottom: 1rem;
+}
+.tutorial__buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  counter-reset: step;
 }
 
 #restaurantsSelection {
