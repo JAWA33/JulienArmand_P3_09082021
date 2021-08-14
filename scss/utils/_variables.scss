@@ -10,6 +10,13 @@ $colorAdd_light:darken($colorAdd_main,4%);
 $colorAdd_dark:darken($colorAdd_main,9%);
 $colorAdd_darkest:darken($colorAdd_main,80%);
 
-//!NOTA : For text color, see in _mixins.scss //
+//Textcolor
+$textColor_default:#101010;
+$textColor_Light: white;
 
+//!NOTA : For text color, automatic change : see in _mixins.scss //
+
+
+//Dimensions:
+$heightInfoForCard: 75px;
 

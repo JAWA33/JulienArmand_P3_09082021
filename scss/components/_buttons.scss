@@ -1,8 +1,8 @@
-//Boutons du site 
+//* Boutons du site -------------------------------
 
 .btn{
     border: none;
-    border-radius: 25px;
+    border-radius: 1.5rem;
     @extend %buttonShadow;
     &:hover{
         transform: translate(0,-0.1rem);
@@ -30,7 +30,7 @@
         font-size: 1rem;
         position: relative;
         @include bg_textColor ($colorAdd_light);
-        @include flexRow ("flexS", "cen");
+        @include flexRow (initial, "cen");
         i {
             margin:0 1.5rem 0 2rem;
             color: darken($colorAdd_dark,40%);
@@ -58,9 +58,100 @@
             height: 1.5rem;
             border-radius: 0.75rem;
         }
-
-        
     }
 }
 
 //! Voir pour ajouter des transitions sur les boutons au hover
+
+
+//* Bouton Like : start -----------------------------------
+.icon__heart{
+    width: 25px;
+    height: 25px;
+
+    &--firstColor{
+        stop-color: $colorPrimary;
+    }
+
+    &--secondColor{
+        stop-color: $colorSecondary;
+    }
+
+    &--design { //état au départ
+        fill: transparent; //remplissage
+        stroke-width: 1.5rem; //épaisseur tracé
+        stroke: $textColor_default; //couleur tracé
+        transform-origin: 50% 50%; //centrage du point d'ancrage
+    }
+
+    &:active{
+        .icon__heart--design{
+            animation: fill-heart 0.5s ease-in-out forwards;  
+        }  
+    }
+
+    &:hover{
+        cursor: pointer;
+        path{
+            animation: bump-heart 0.5s ease-in-out infinite;
+        }
+    }  
+}
+
+@keyframes fill-heart{
+
+    0%
+    {
+        fill-opacity: 0%;
+    }
+    
+    30%
+    {
+        stroke-width: 0;
+    }
+
+    40%
+    {
+        fill: url(#heartGradient);
+        fill-opacity: 0%;
+    }
+
+    100%
+    {
+        stroke-width: 0;
+        fill: url(#heartGradient);
+        fill-opacity: 100%;
+    }
+
+}
+
+@keyframes bump-heart{
+    0%
+    {
+        stroke: $colorPrimary;
+        transform: scale(0.9);
+    }
+
+    20%
+    {
+        transform: scale(1);
+    }
+
+    40%
+    {
+        transform: scale(0.9);
+    }
+
+    60%
+    {
+        transform: scale(1);
+    }
+
+    100%
+    {
+        stroke: $colorPrimary;
+        transform: scale(1);
+    }
+}
+
+//* Bouton Like : end -----------------------------------

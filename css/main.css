@@ -19,10 +19,10 @@ img {
   color: #99E2D0;
 }
 
-.btn {
+.cardRestaurant, .btn {
   box-shadow: 0 0.3rem 0.5rem rgba(51, 51, 51, 0.2);
 }
-.btn:hover {
+.cardRestaurant:hover, .btn:hover {
   box-shadow: 0 0.4rem 0.5rem rgba(51, 51, 51, 0.3);
 }
 
@@ -69,7 +69,7 @@ li {
 
 .btn {
   border: none;
-  border-radius: 25px;
+  border-radius: 1.5rem;
 }
 .btn:hover {
   transform: translate(0, -0.1rem);
@@ -98,7 +98,7 @@ li {
   color: #101010;
   display: flex;
   flex-direction: row;
-  justify-content: "flexS";
+  justify-content: initial;
   align-items: center;
 }
 .btn__tutorial i {
@@ -128,6 +128,160 @@ li {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 0.75rem;
+}
+
+.icon__heart {
+  width: 25px;
+  height: 25px;
+}
+.icon__heart--firstColor {
+  stop-color: #9356DC;
+}
+.icon__heart--secondColor {
+  stop-color: #FF79DA;
+}
+.icon__heart--design {
+  fill: transparent;
+  stroke-width: 1.5rem;
+  stroke: #101010;
+  transform-origin: 50% 50%;
+}
+.icon__heart:active .icon__heart--design {
+  -webkit-animation: fill-heart 0.5s ease-in-out forwards;
+          animation: fill-heart 0.5s ease-in-out forwards;
+}
+.icon__heart:hover {
+  cursor: pointer;
+}
+.icon__heart:hover path {
+  -webkit-animation: bump-heart 0.5s ease-in-out infinite;
+          animation: bump-heart 0.5s ease-in-out infinite;
+}
+
+@-webkit-keyframes fill-heart {
+  0% {
+    fill-opacity: 0%;
+  }
+  30% {
+    stroke-width: 0;
+  }
+  40% {
+    fill: url(#heartGradient);
+    fill-opacity: 0%;
+  }
+  100% {
+    stroke-width: 0;
+    fill: url(#heartGradient);
+    fill-opacity: 100%;
+  }
+}
+
+@keyframes fill-heart {
+  0% {
+    fill-opacity: 0%;
+  }
+  30% {
+    stroke-width: 0;
+  }
+  40% {
+    fill: url(#heartGradient);
+    fill-opacity: 0%;
+  }
+  100% {
+    stroke-width: 0;
+    fill: url(#heartGradient);
+    fill-opacity: 100%;
+  }
+}
+@-webkit-keyframes bump-heart {
+  0% {
+    stroke: #9356DC;
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    stroke: #9356DC;
+    transform: scale(1);
+  }
+}
+@keyframes bump-heart {
+  0% {
+    stroke: #9356DC;
+    transform: scale(0.9);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.9);
+  }
+  60% {
+    transform: scale(1);
+  }
+  100% {
+    stroke: #9356DC;
+    transform: scale(1);
+  }
+}
+.cardRestaurant {
+  width: 336px;
+  height: 252px;
+  margin: 1rem;
+  border-radius: 0.9rem;
+  overflow: hidden;
+  position: relative;
+  background-color: white;
+  color: #101010;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: flex-start;
+}
+.cardRestaurant--new::before {
+  content: "Nouveau";
+  position: absolute;
+  right: 0.6rem;
+  top: 1rem;
+  width: 80px;
+  height: 30px;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.1rem;
+  background-color: #99E2D0;
+  color: #278870;
+}
+.cardRestaurant__image {
+  width: 100%;
+  height: calc(100% - 75px);
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+.cardRestaurant__info {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem 0 1rem;
+}
+.cardRestaurant__title {
+  margin-bottom: 0.3rem;
 }
 
 .mySite {
@@ -251,6 +405,14 @@ body {
   counter-reset: step;
 }
 
-#restaurantsSelection {
+.ourRestaurants {
   background-color: whitesmoke;
+  color: #101010;
+}
+.ourRestaurants__selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=main.css.map */

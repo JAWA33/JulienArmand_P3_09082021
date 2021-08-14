@@ -61,7 +61,15 @@ body{
 
 }
 
-#restaurantsSelection{
-    background-color: $colorAdd_light;
+.ourRestaurants{
+    @include bg_textColor($colorAdd_light);
+
+    &__selection{
+        @include flexCol ("cen", "cen");  //! A modifier flex-wrap
+        flex-wrap: wrap;
+    }
+    
+
 }
+
 

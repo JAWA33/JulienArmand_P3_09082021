@@ -4,9 +4,9 @@
   background-color: $textColor;
 
   @if (lightness($textColor) > 70%) {
-    $textColor: #101010;
+    $textColor:$textColor_default;
   } @else {
-    $textColor: white;
+    $textColor: $textColor_Light;
   }
   color: $textColor;
 }
