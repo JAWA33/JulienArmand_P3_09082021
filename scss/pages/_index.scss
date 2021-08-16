@@ -5,6 +5,7 @@ body{
 .citySelection{
     background-color: $colorAdd_dark;
     @include flexCol ("cen","cen");
+
     &__chooseBlock{
         margin: 1rem 0;
     }
@@ -35,6 +36,12 @@ body{
     @include bg_textColor($colorAdd_light);
     width: 100%;
     height: 280px;
+
+    @include tablet-limit{
+        width: 750px;
+        border-radius: 2rem;
+        margin: 1rem auto;
+    }
      
     &__title{
         width: 64%;
@@ -51,25 +58,59 @@ body{
     @include flexCol ("spE","flexS");
     @include bg_textColor($colorAdd_main);
     margin: 3rem 1.5rem;
+    
+    @include mobile-limit{
+        @include flexCol ("cen","cen");
+    }
     &__title{
         margin-bottom: 1rem;
+        
     }
     &__buttons{
-        @include flexCol("cen", "cen");
+        @include flexRow("cen", "cen");
+        flex-wrap: wrap;
         width: 100%;
         counter-reset: step;
+        @include mobile-limit{
+            @include flexRow ("spE","cen");
+        }
+        @include desktop-limit{
+            width: 1200px;
+            margin: 0 auto;
+        }
+
     }
 
 }
 
 .ourRestaurants{
     @include bg_textColor($colorAdd_light);
+    @include flexCol ("cen", "cen");
+    padding: 3rem 0;
+
+    @include tablet-limit{
+        margin: 1.5rem;
+        border-radius: 2rem;
+    }
+
+    &__title{
+        width: 90%;
+        margin-bottom: 1rem;
+        @include mobile-limit{
+            text-align: center;
+        }
+        
+    }
 
     &__selection{
-        @include flexCol ("cen", "cen");  //! A modifier flex-wrap
+        @include flexRow ("cen", "cen");
         flex-wrap: wrap;
-        //A supprimer pb GITtoken
-        background: #000;
+
+        @include tablet-limit{
+            width: 100%;
+            @include flexRow("spE","cen");
+        }
+
     }
     
 

@@ -1,3 +1,5 @@
+//* Automatic Color -----------------------------------// 
+
 //Choose background color and Text Color automatic (depend of background-color)//
 
 @mixin bg_textColor($textColor: $colorAdd_main) {
@@ -10,6 +12,8 @@
   }
   color: $textColor;
 }
+
+//* FLEXBOX mixins ------------------------------------------//
 
 //Flexbox Column
 @mixin flexCol ($justify: initial, $align: initial){
@@ -79,4 +83,30 @@
     align-items:$align;
   }
 
+}
+
+//* BREAKPOINTS mixins for mobile First ---------------------------// 
+
+//For Tablet
+
+@mixin mobile-limit {
+  @media screen and (min-width: map-get($breakpoints, mobile)){
+    @content;
+  } 
+}
+
+//For Desktop
+
+@mixin tablet-limit {
+  @media screen and (min-width: map-get($breakpoints, tablet)){
+    @content;
+  }
+}
+
+//For big desktop
+
+@mixin desktop-limit {
+  @media screen and (min-width: map-get($breakpoints, desktop)){
+    @content;
+  }
 }

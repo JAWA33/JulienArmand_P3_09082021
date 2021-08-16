@@ -101,6 +101,17 @@ li {
   justify-content: initial;
   align-items: center;
 }
+@media screen and (min-width: 420px) {
+  .btn__tutorial {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .btn__tutorial {
+    width: 28%;
+    padding-right: 0.5rem;
+  }
+}
 .btn__tutorial i {
   margin: 0 1.5rem 0 2rem;
   color: #828282;
@@ -154,8 +165,8 @@ li {
   cursor: pointer;
 }
 .icon__heart:hover path {
-  -webkit-animation: bump-heart 0.5s ease-in-out infinite;
-          animation: bump-heart 0.5s ease-in-out infinite;
+  -webkit-animation: bump-heart 0.9s ease-in-out infinite;
+          animation: bump-heart 0.9s ease-in-out infinite;
 }
 
 @-webkit-keyframes fill-heart {
@@ -232,9 +243,10 @@ li {
   }
 }
 .cardRestaurant {
-  width: 336px;
+  width: 90%;
+  max-width: 400px;
   height: 252px;
-  margin: 1rem;
+  margin: 0.6rem;
   border-radius: 0.9rem;
   overflow: hidden;
   position: relative;
@@ -244,6 +256,23 @@ li {
   flex-direction: column;
   justify-content: initial;
   align-items: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .cardRestaurant {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .cardRestaurant {
+    width: 20%;
+  }
+}
+.cardRestaurant:hover {
+  transform: translate(0, -0.3rem) scale(1.05);
+}
+.cardRestaurant:active {
+  transform: translate(0, 0rem);
+  box-shadow: none;
 }
 .cardRestaurant--new::before {
   content: "Nouveau";
@@ -259,7 +288,7 @@ li {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 0.1rem;
+  border-radius: 0.15rem;
   background-color: #99E2D0;
   color: #278870;
 }
@@ -284,13 +313,16 @@ li {
   margin-bottom: 0.3rem;
 }
 
+header {
+  background-color: white;
+  color: #101010;
+}
+
 .mySite {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  color: #101010;
   position: relative;
   width: 100%;
 }
@@ -312,17 +344,48 @@ li {
   background: linear-gradient(#c2c2c2, #e8e8e8);
 }
 
+footer {
+  background-color: #333333;
+  color: white;
+}
+
 .endPage {
   width: 100%;
   padding: 1.5rem;
-  background-color: #333333;
-  color: white;
+}
+@media screen and (min-width: 420px) {
+  .endPage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .endPage {
+    width: 1100px;
+    margin: 0 auto;
+  }
 }
 .endPage__title {
   margin-bottom: 1rem;
 }
+@media screen and (min-width: 420px) {
+  .endPage__title {
+    width: 100%;
+    text-align: center;
+  }
+}
 .endPage__lign {
   margin-bottom: 0.5rem;
+}
+@media screen and (min-width: 420px) {
+  .endPage__lign {
+    width: auto;
+    text-align: center;
+    margin: 0 1rem 1rem 1rem;
+  }
 }
 .endPage__lign i {
   width: 1.6rem;
@@ -375,6 +438,13 @@ body {
   width: 100%;
   height: 280px;
 }
+@media screen and (min-width: 768px) {
+  .exploreRestaurants {
+    width: 750px;
+    border-radius: 2rem;
+    margin: 1rem auto;
+  }
+}
 .exploreRestaurants__title {
   width: 64%;
   text-align: center;
@@ -393,27 +463,78 @@ body {
   color: #101010;
   margin: 3rem 1.5rem;
 }
+@media screen and (min-width: 420px) {
+  .tutorial {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .tutorial__title {
   margin-bottom: 1rem;
 }
 .tutorial__buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   counter-reset: step;
+}
+@media screen and (min-width: 420px) {
+  .tutorial__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .tutorial__buttons {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .ourRestaurants {
   background-color: whitesmoke;
   color: #101010;
-}
-.ourRestaurants__selection {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+  .ourRestaurants {
+    margin: 1.5rem;
+    border-radius: 2rem;
+  }
+}
+.ourRestaurants__title {
+  width: 90%;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 420px) {
+  .ourRestaurants__title {
+    text-align: center;
+  }
+}
+.ourRestaurants__selection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
-  background: #000;
+}
+@media screen and (min-width: 768px) {
+  .ourRestaurants__selection {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 }/*# sourceMappingURL=main.css.map */

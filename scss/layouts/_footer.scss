@@ -1,12 +1,38 @@
+footer{
+  @include bg_textColor($colorAdd_darkest);
+}
+
 .endPage{
   width: 100%;
   padding: 1.5rem;
-  @include bg_textColor($colorAdd_darkest);
+
+  @include mobile-limit{
+    @include flexRow("spE","cen");
+    flex-wrap: wrap;
+  }
+
+  @include desktop-limit{
+    width: 1100px;
+    margin: 0 auto;
+  }
+
   &__title{
     margin-bottom: 1rem;
+    @media screen and (min-width:420px){
+      width: 100%;
+      text-align: center;
+    }
   }
+
   &__lign{
     margin-bottom: 0.5rem;
+    
+    @include mobile-limit{
+      width: auto;
+      text-align: center;
+      margin: 0 1rem 1rem 1rem;
+    }
+
     i {
       width: 1.6rem;
     }

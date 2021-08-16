@@ -16,7 +16,14 @@ $textColor_Light: white;
 
 //!NOTA : For text color, automatic change : see in _mixins.scss //
  
-
-//Dimensions:
+//* Dimensions:
 $heightInfoForCard: 75px;
 
+
+//* Breakpoints maps
+$breakpoints:
+(
+    mobile: 420px,
+    tablet: 768px,
+    desktop: 1200px
+);

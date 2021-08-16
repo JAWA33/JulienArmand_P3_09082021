@@ -1,11 +1,16 @@
+header{
+    @include bg_textColor($colorAdd_main);
+}
+
 .mySite{
     @include flexCol ("cen","cen");
-    @include bg_textColor($colorAdd_main);
     position: relative;
     width: 100%;
+
     &__title{
         margin: 0.6rem;
     }
+
     &__backToMenu{
         position: absolute;
         left: 1.5rem;
@@ -14,6 +19,7 @@
             @extend %basicHover;
         }
     }
+
     &::after{
         content: '';
         position: absolute;
