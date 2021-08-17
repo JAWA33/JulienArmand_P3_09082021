@@ -19,11 +19,13 @@
   
   <body>
 
-    <section class="loader loader--end"><!--For continue loader : delete loader--end-->
+    <section class="loader loader--end">
+      <!--For continue loader : delete "loader-end" -->
+      <h2 class="displayNone">Loader</h2>
       <div class="loader__heart">
       
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 550 512">
-          <path class="loader__heart--design"d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+          <path class="loader__heart--design" d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
           c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
           c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
           s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
@@ -98,9 +100,7 @@
       <section class="exploreRestaurants ">
         <h2 class="exploreRestaurants__title">Réservez le menu qui vous convient</h2>
         <p class="exploreRestaurants__text">Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
-        <a href="#restaurantsSelection">
-          <button class="btn btn__main">Explorer nos restaurants</button>
-        </a>
+        <button class="btn btn__main" onclick="window.location.href = '#restaurantsSelection';">Explorer nos restaurants</button>
       </section>
 
       <section class="tutorial">
@@ -133,7 +133,7 @@
                         <stop offset="100%" class="icon__heart--secondColor"/>
                       </linearGradient>
                     </defs>
-                    <path class="icon__heart--design"d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                    <path class="icon__heart--design" d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
@@ -156,13 +156,7 @@
               <div class="cardRestaurant__like">
                 <div class="icon__heart">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 550 512">
-                    <defs>
-                      <linearGradient id="heartGradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" class="icon__heart--firstColor"/>
-                        <stop offset="100%" class="icon__heart--secondColor"/>
-                      </linearGradient>
-                    </defs>
-                    <path class="icon__heart--design"d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                    <path class="icon__heart--design" d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
@@ -185,13 +179,7 @@
               <div class="cardRestaurant__like">
                 <div class="icon__heart">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 550 512">
-                    <defs>
-                      <linearGradient id="heartGradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" class="icon__heart--firstColor"/>
-                        <stop offset="100%" class="icon__heart--secondColor"/>
-                      </linearGradient>
-                    </defs>
-                    <path class="icon__heart--design"d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                    <path class="icon__heart--design" d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514
@@ -214,13 +202,7 @@
               <div class="cardRestaurant__like">
                 <div class="icon__heart">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="-20 0 550 512">
-                    <defs>
-                      <linearGradient id="heartGradient" x1="0" x2="0" y1="0" y2="1">
-                        <stop offset="0%" class="icon__heart--firstColor"/>
-                        <stop offset="100%" class="icon__heart--secondColor"/>
-                      </linearGradient>
-                    </defs>
-                    <path class="icon__heart--design"d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
+                    <path class="icon__heart--design" d="M376,30c-27.783,0-53.255,8.804-75.707,26.168c-21.525,16.647-35.856,37.85-44.293,53.268
                     c-8.437-15.419-22.768-36.621-44.293-53.268C189.255,38.804,163.783,30,136,30C58.468,30,0,93.417,0,177.514
                     c0,90.854,72.943,153.015,183.369,247.118c18.752,15.981,40.007,34.095,62.099,53.414C248.38,480.596,252.12,482,256,482
                     s7.62-1.404,10.532-3.953c22.094-19.322,43.348-37.435,62.111-53.425C439.057,330.529,512,268.368,512,177.514

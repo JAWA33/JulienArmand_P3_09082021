@@ -3,7 +3,7 @@
 @keyframes textNeon {
     0%{
         color: $colorTertiary;
-        text-shadow: 0 0 0 1rem $colorTertiary;
+        text-shadow: 0 0 15px $colorTertiary;
     }
     90%{
         color: $colorAdd_darkest;
@@ -11,7 +11,7 @@
     }
     100%{
         color: $colorTertiary;
-        text-shadow: 0 0 0 1rem $colorTertiary;
+        text-shadow: 0 0 15px $colorTertiary;
     }
 }
 
@@ -141,7 +141,7 @@
 
     0%
     {
-        fill-opacity: 0%;
+        fill-opacity: 0;
     }
     
     30%
@@ -152,14 +152,14 @@
     40%
     {
         fill: url(#heartGradient);
-        fill-opacity: 0%;
+        fill-opacity: 0;
     }
 
     100%
     {
         stroke-width: 0;
         fill: url(#heartGradient);
-        fill-opacity: 100%;
+        fill-opacity: 1;
     }
 
 }

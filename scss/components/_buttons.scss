@@ -1,6 +1,7 @@
 //* Boutons du site -------------------------------
 
 .btn{
+    display: inline-block;
     border: none;
     border-radius: 1.5rem;
     @extend %buttonShadow;
