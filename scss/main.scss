@@ -6,11 +6,13 @@
 @import "./utils/mixins";
 @import "./utils/placeholders";
 @import "./utils/helperClass";
+@import "./utils/keyframes";
 @import "./base/fonts";
 @import "./components/buttons";
 @import "./components/cards";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./pages/index";
-@import "./pages/pageTypeRestaurant";
+@import "./components/loader";
+
  
