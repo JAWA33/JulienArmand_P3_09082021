@@ -21,8 +21,8 @@
         width: 20%;
     }
 
-    &:hover{
-        transform: translate(0,-0.3rem) scale(1.05);
+    &:hover{ //! placeholder à créer
+        transform: translateY(-3px) scale(1.01); 
     }
     &:active{
         transform: translate(0, 0rem);

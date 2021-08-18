@@ -55,7 +55,6 @@ body{
     }
 }
 
-
 .tutorial{
     @include flexCol ("spE","flexS");
     @include bg_textColor($colorAdd_main);

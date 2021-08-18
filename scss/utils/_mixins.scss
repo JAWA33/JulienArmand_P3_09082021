@@ -144,3 +144,14 @@
     }
   }
 }
+
+//* Appearance Dish mixins
+
+@mixin incrementDelayForDish {
+
+  @for $d from 1 through 5 {
+    &:nth-child(#{$d}){
+      animation-delay: (0.3s*$d);
+    }
+  }
+}

@@ -3,15 +3,12 @@
 @keyframes textNeon {
     0%{
         color: $colorTertiary;
-        text-shadow: 0 0 15px $colorTertiary;
     }
     90%{
         color: $colorAdd_darkest;
-        text-shadow: none;
     }
     100%{
         color: $colorTertiary;
-        text-shadow: 0 0 15px $colorTertiary;
     }
 }
 
@@ -26,7 +23,7 @@
     }
 }
 
-@keyframes rotateCircleA{
+@keyframes rotateCircle{
     0%{
         transform: scale(0);
     }
@@ -64,34 +61,34 @@
     }
 }
 
-@keyframes rotateCircle{
-    0%{
-        transform: scale(0);
-    }
-    10%{
-        transform: scale(1);
-    }
+// @keyframes rotateCircleB{
+//     0%{
+//         transform: scale(0);
+//     }
+//     10%{
+//         transform: scale(1);
+//     }
 
-    33%{
-        background: $colorSecondary;
-        box-shadow: 0 0 10px $colorSecondary,
-                    0 0 20px $colorSecondary,
-                    0 0 40px $colorSecondary,
-                    0 0 60px $colorSecondary;
-    }
+//     33%{
+//         background: $colorSecondary;
+//         box-shadow: 0 0 10px $colorSecondary,
+//                     0 0 20px $colorSecondary,
+//                     0 0 40px $colorSecondary,
+//                     0 0 60px $colorSecondary;
+//     }
    
-    66%{
-        background: $colorTertiary;
-        box-shadow: 0 0 10px $colorTertiary,
-                    0 0 20px $colorTertiary,
-                    0 0 40px $colorTertiary,
-                    0 0 60px $colorTertiary;
-    }
+//     66%{
+//         background: $colorTertiary;
+//         box-shadow: 0 0 10px $colorTertiary,
+//                     0 0 20px $colorTertiary,
+//                     0 0 40px $colorTertiary,
+//                     0 0 60px $colorTertiary;
+//     }
 
-    90%,100%{
-        transform: scale(0);
-    }
-}
+//     90%,100%{
+//         transform: scale(0);
+//     }
+// }
 
 @keyframes bumpLoader{
     0%
@@ -190,5 +187,55 @@
     {
         stroke: $colorPrimary;
         transform: scale(1);
+    }
+}
+
+//! check Dish
+
+@keyframes checkDish{
+    0%
+    {
+        $checkTranslate: 0px;
+        transform: translate($checkTranslate);
+    }
+
+    100%
+    {
+        $checkTranslate: -60px;
+        transform: translate($checkTranslate);
+    }
+}
+@keyframes reduceText{
+    0%
+    {
+        $checkTranslate: 0px;
+        width: calc(80% + #{($checkTranslate)});
+    }
+
+    100%
+    {
+        $checkTranslate: -60px;
+        width: calc(80% + #{($checkTranslate)});
+    }
+}
+
+//! appearance Dish
+
+@keyframes appearanceDish{
+    0%
+    {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+
+    70%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
     }
 }

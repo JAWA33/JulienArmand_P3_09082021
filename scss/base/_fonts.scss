@@ -6,12 +6,12 @@
 //Associations par défaut des polices
 
  
-h1, .logoFont, .loader__text{
+h1, .logoFont, .loader__text, .restaurant__title{
     font-family: 'Shrikhand', cursive, Arial, Helvetica, sans-serif;
     font-weight: initial;
 }
 
-h2, h3, p, li{
+h2, h3, h4, p, li{
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
@@ -19,7 +19,7 @@ h1{
     font-size: 1.9rem;
 }
 
-h2 {
+h2{
     font-size: 1.5rem;
     font-weight:bold;
 }
@@ -34,7 +34,7 @@ p{
     font-weight:200;
 }
 
-li{
+li, .menuPart__title{
     font-size: 1rem;
     font-weight:300;
 }
@@ -46,4 +46,23 @@ li{
 .loader__text{
     font-size: 1.5rem;
     letter-spacing: -0.15rem;
+}
+
+.restaurant__title{
+    font-size: 1.75rem;
+}
+
+.dish__price--amount {
+    font-size: 0.92rem;
+    font-weight:500;
+}
+
+.dish__name--title {
+    font-size: 1.12rem;
+    font-weight:500;
+}
+
+.dish__name--side {
+    font-size: 0.92rem;
+    font-weight:300;
 }

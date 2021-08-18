@@ -1,0 +1,170 @@
+
+.restaurant{
+    position: relative;
+    width: 100%;
+
+    &__image{
+        width: 100%;
+        max-height: 600px;
+        object-fit: cover;
+        object-position: bottom;
+        margin-bottom: -50px;
+    }
+    
+    &__menu{
+    position: relative;
+    width: 100%;
+    padding: 1.8rem 1.2rem 1.8rem 1.2rem;
+    border-radius: 2.8rem 2.8rem 0 0;
+    @include bg_textColor ($colorAdd_light);
+    @include flexCol("cen","cen");
+
+    }
+
+    &__name{
+        width: 100%;
+        margin-bottom: 2rem;
+        @include flexRow("spB","cen"); 
+    }
+    
+    &__order{
+        margin: 0.5rem 0 2.5rem 0;
+    }
+}
+
+.menuPart{
+    width: 100%;
+    @include flexCol("cen","cen");
+    margin-bottom: 2.5rem;
+
+    &__name{
+        width: 100%;
+        margin-bottom: 1.3rem;
+        &::after{
+            content: "";
+            position: absolute;
+            width: 42px;
+            height: 3px;
+            margin-top: 0.5rem;
+            background: $colorTertiary;
+        }
+    }
+    
+}
+
+.dish{
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    height: 100%;
+    @include bg_textColor ($colorAdd_main);
+    margin: 0.5rem auto;
+    padding: 0.7rem 0.7rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    cursor: pointer;
+
+    @include flexRow ("spB","cen");
+    @extend %buttonShadow;
+
+    animation: appearanceDish 1s ease-in-out backwards;
+    @include incrementDelayForDish;
+
+    &:hover{ //! placeholder à créer
+        transform: translateY(-3px) scale(1.01);
+    }
+    
+    &:active{
+        transform: scale(1);
+        box-shadow: none;
+        
+        > .dish{
+            &__price{
+                animation: checkDish 0.4s ease-out forwards;
+            }
+            &__selection{
+                animation: checkDish 0.4s ease-out forwards; 
+                > .dish__selection--icon{
+                    transform: rotate(720deg);
+                }
+            }
+            &__name{
+                animation: reduceText 0.4s ease-out forwards;
+            }
+        }
+    }
+    
+    &__name{
+        width: 80%;
+        
+        &--title{
+            margin-bottom: 0.3rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        &--side{
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__price{
+        width: 15%;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+        
+        &--amount{
+            margin-top:1.6rem;
+        }
+    
+    }
+
+    &__selection{
+        width: 60px;
+        height: 100%;
+        position: absolute;
+        right: -60px;
+        background: $colorTertiary;
+        @include flexRow("cen","cen");
+
+        &--icon{
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: $colorAdd_main;
+            transition: transform 0.4s;
+            transform: rotate(-180deg);
+            
+            &::before{
+                content: "";
+                position: absolute;
+                top: 16px;
+                right: 13px;
+                width: 8px;
+                height: 3px;
+                border-radius: 1px;
+                background-color: $colorTertiary;
+                transform-origin: right;
+                transform: rotate(45deg);
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                top: 16px;
+                left: 10px;
+                width: 14px;
+                height: 3px;
+                border-radius: 1px;
+                background-color: $colorTertiary;
+                transform-origin: left;
+                transform: rotate(-45deg);
+            }
+        }
+
+        
+    }
+}
