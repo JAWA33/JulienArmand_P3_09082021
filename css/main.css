@@ -14,6 +14,16 @@ img {
   max-width: 100%;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
 .citySelection__icon:hover i, .endPage__lign a:hover, .mySite__backToMenu:hover {
   transform: scale(1.3);
   color: #99E2D0;
